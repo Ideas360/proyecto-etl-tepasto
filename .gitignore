@@ -1,0 +1,27 @@
+# Entorno y caché de Python
+.venv/
+__pycache__/
+*.pyc
+
+# Credenciales (este proyecto no usa, se deja por seguridad)
+.env
+
+# Datos con información personal: NUNCA se suben
+data/raw/PASTO*.xlsx
+# Copia en CSV generada por Extract (puede contener datos personales si se usa el archivo completo)
+data/raw/*_extraido.csv
+
+# Salidas generadas por el pipeline (se reconstruyen con python pipeline.py)
+data/processed/*
+!data/processed/.gitkeep
+*.db
+*.sqlite
+
+# Sistema operativo / editores
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Metadatos de la última extracción
+data/raw/extraccion_meta.json
