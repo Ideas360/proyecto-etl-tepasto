@@ -12,7 +12,7 @@
 
 | Nombre | Código | Usuario de GitHub |
 |---|---|---|
-| Gabriel Luciano Muñoz Cupacán | [PENDIENTE: código estudiantil] | [PENDIENTE: @usuario] |
+| Gabriel Luciano Muñoz Cupacán | github.com/Ideas360 |
 
 ## Tabla de contenido
 
@@ -34,7 +34,7 @@
 
 La Cámara de Comercio de Pasto administra el registro mercantil de las empresas de su jurisdicción (Pasto y 40 municipios más de Nariño). Sin embargo, la base se entrega como un listado plano de 19.273 registros con códigos de actividad económica (CIIU) y de municipio sin traducir, sin agrupación por sector ni territorio, y con problemas de calidad que impiden usarla directamente: un código de estado de matrícula sin diccionario documentado, valores de establecimiento con outliers extremos (hasta $666.121 millones frente a una mediana de $1,6 millones) y campos que mezclan código y texto en una misma celda.
 
-Esto dificulta que la Cámara, la Alcaldía de Pasto o la Gobernación de Nariño respondan preguntas básicas de planeación: ¿qué sectores económicos predominan?, ¿dónde se concentra la actividad empresarial?, ¿qué municipios tienen baja presencia de empresas formales? Estos actores usarían los datos resultantes para priorizar programas de fomento y formalización empresarial.
+Esto dificulta que los stalkeholders tales como la Alcaldía de Pasto o la Gobernación de Nariño respondan preguntas básicas de planeación: ¿qué sectores económicos predominan?, ¿dónde se concentra la actividad empresarial?, ¿qué municipios tienen baja presencia de empresas formales? Estos actores usarían los datos resultantes para priorizar programas de fomento y formalización empresarial.
 
 **Objetivo:** construir un pipeline ETL que integre el registro mercantil con la clasificación CIIU Rev. 4 A.C. del DANE, limpie y estandarice los datos, y los deje cargados en una base SQLite con modelo dimensional (hechos de empresas y dimensiones de municipio, sector y tiempo), junto con un dashboard interactivo de Plotly para el análisis sectorial y territorial.
 
@@ -139,8 +139,8 @@ No se necesita base de datos externa, cuenta en la nube ni Docker: el destino es
 
 ```bash
 # 1. Clonar el repositorio
-git clone https://github.com/[PENDIENTE-usuario]/[PENDIENTE-repositorio].git
-cd [PENDIENTE-repositorio]
+git clone https://github.com/[github.com/Ideas360]/[proyecto-etl-tepasto].git
+cd [proyecto-etl-tepasto]
 
 # 2. Crear y activar el entorno virtual
 python -m venv .venv
@@ -364,4 +364,4 @@ El dashboard se abre con doble clic en `docs/dashboard.html` (no requiere servid
 - DANE. *Clasificación Industrial Internacional Uniforme de todas las actividades económicas (CIIU) Rev. 4 adaptada para Colombia.* https://www.dane.gov.co/index.php/sistema-estadistico-nacional-sen/normas-y-estandares/nomenclaturas-y-clasificaciones/clasificaciones/clasificacion-industrial-internacional-uniforme-de-todas-las-actividades-economicas-ciiu (se usó el archivo "Estructura detallada CIIU Rev. 4 A.C. 2020").
 - DANE. *CIIU Rev. 4 A.C. (2022).* Documento de actualización, Resolución 2306 de 2022. https://www.dane.gov.co/files/sen/nomenclatura/ciiu/CIIU_Rev_4_AC2022.pdf
 - Documentación de las herramientas: pandas (https://pandas.pydata.org), openpyxl (https://openpyxl.readthedocs.io), SQLite (https://www.sqlite.org), Plotly (https://plotly.com/python).
-- Uso de IA generativa: se empleó Claude (Anthropic) como apoyo para el diseño del pipeline, la escritura y depuración del código, la documentación y la redacción de las pruebas. Las decisiones de alcance (fuentes, destino, tipo de dashboard, tratamiento de datos personales) las tomó el autor, y los resultados se contrastaron con el archivo original.
+- Uso de IA generativa: se empleó Claude (Anthropic) como apoyo para el diseño del pipeline y depuración del código.
